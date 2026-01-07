@@ -5,13 +5,13 @@ const app = express();
 app.use(cors())
 app.use(express.json())
 
-app.listen(process.env.DB_PORT, async() => {
+app.listen(process.env.DB_PORT, async () => {
     console.log("server is running on port 3306");
     try {
         await connectToDatabase();
 
     } catch (error) {
-        console.log("Failed to intialize the database",error)
+        console.log("Failed to intialize the database", error)
         
     }
 });
